@@ -6,10 +6,10 @@ class Calc{
         System.out.println("Suma: ");
         num1 = reader.nextInt();
         num2 = reader.nextInt();
-
+        
         resultado = num1+num2;
         System.out.println("El Resultado es: "+resultado);
-
+        //Comentario Agregado.
         reader.close();
     }
 }
