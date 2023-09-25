@@ -3,7 +3,8 @@ class Calc{
     public static void main(String[]args){
         Scanner reader = new Scanner(System.in);
         int num1, num2, resultado=0;
-        char[] opp = {'+', '-'};
+        char[] opp = {'+', '-', '*', '/'};
+
         System.out.println("Calculadora: ");
         num1 = reader.nextInt();
         opp = reader.next.charAt(0);
@@ -12,15 +13,22 @@ class Calc{
         switch(opp){
             case '+':
                 resultado = llamada.Suma(num1, num2);
-            break;
+                break;
             case '-':
                 resultado = llamada.Resta(num1, num2);
-            break;
+                break;
+            case '*':
+                resultado = Multiplicacion(num1, num2);
+                break;
+            case '/':
+                resultado = Division(num1, num2);
+                break;
             default: 
             System.out.println("Error: Operación Inválida.")
             break;     
         }
-        
+        System.out.print("Resultado: "+resultado);
+
         reader.close();
     }
 
